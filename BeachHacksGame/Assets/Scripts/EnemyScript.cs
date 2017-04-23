@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
     public GameObject player;
     public float MoveSpeed;
-    public const float maxHp = 20;
+    public const float maxHp = 1;
     public float hp;
-
+	public GameObject manager;
     // Use this for initialization
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -23,6 +23,7 @@ public class EnemyScript : MonoBehaviour {
 
         if (hp <= 0) {
             Destroy(gameObject);
+			manager.gameObject.GetComponent<levelManager> ().enemey_counter--;
         }
     }
 
