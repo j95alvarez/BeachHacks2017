@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachHacksGame", "BeachHacksGame.csproj", "{51A398E2-ECD8-8404-ABA5-C31BD307F453}"
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachHacksGame.CSharp", "BeachHacksGame.CSharp.csproj", "{66B4DFA3-7C5C-5A78-5D34-C4419CB466B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66B4DFA3-7C5C-5A78-5D34-C4419CB466B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66B4DFA3-7C5C-5A78-5D34-C4419CB466B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66B4DFA3-7C5C-5A78-5D34-C4419CB466B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66B4DFA3-7C5C-5A78-5D34-C4419CB466B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
