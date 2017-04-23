@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachHacksGame", "Assembly-CSharp.csproj", "{8273A6E6-DC1D-ED23-6EE4-9C28C7E823BA}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachHacksGame", "BeachHacksGame.csproj", "{51A398E2-ECD8-8404-ABA5-C31BD307F453}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8273A6E6-DC1D-ED23-6EE4-9C28C7E823BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8273A6E6-DC1D-ED23-6EE4-9C28C7E823BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8273A6E6-DC1D-ED23-6EE4-9C28C7E823BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8273A6E6-DC1D-ED23-6EE4-9C28C7E823BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A398E2-ECD8-8404-ABA5-C31BD307F453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
