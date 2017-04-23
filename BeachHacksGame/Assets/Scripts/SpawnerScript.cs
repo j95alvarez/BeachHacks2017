@@ -21,7 +21,6 @@ public class SpawnerScript : MonoBehaviour {
             for(int i = 0; i < numEnemy; i++)
             {
                 Instantiate(Enemy, transform.position, Quaternion.identity);
-                Debug.Log("Enemy Spawned!");
 
             }
 

@@ -8,11 +8,10 @@ public class TurretScript : MonoBehaviour {
 
     private int timer;
     [SerializeField]
-    private int fireRate;
+    private float fireRate;
     // Use this for initialization
     void Start () {
         timer = 0;
-        fireRate = 5;
     }
 	
 	// Update is called once per frame
