@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	public int speed;
-
+    public Transform pause;
+    public GameObject[] items; 
     //Animator animatorObj;
 
     [SerializeField]
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{ // directional buttons
+        
 		if (Input.GetKey(KeyCode.W)) 
 		{
 			Debug.Log ("up");
@@ -57,6 +59,16 @@ public class Player : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
+
+        if (Input.GetKeyDown(KeyCode.E) && hasTurret)
+        {
+            Instantiate(items[0], transform.position + (new Vector3(1,0,0)), Quaternion.identity);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && hasWire)
+        {
+            Instantiate(items[1], transform.position + (new Vector3(-1,-0.5f,0)), Quaternion.identity);
         }
 
     }

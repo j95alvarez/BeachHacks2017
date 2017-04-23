@@ -24,5 +24,12 @@ public class BulletScript : MonoBehaviour {
         
 	}
 
-  
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.tag == "Enemy")
+        {
+            coll.gameObject.GetComponent<EnemyScript>().hp--;
+        }
+        Destroy(gameObject);
+    }
 }
