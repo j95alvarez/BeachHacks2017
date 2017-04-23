@@ -11,6 +11,7 @@ public class DoorScript : MonoBehaviour {
     //private void OnTriggerEnter2D(Collider2D player)
     private void OnTriggerEnter2D(Collider2D player)
     {
-        player.transform.position = destination.position;  
+        if(player.gameObject.tag == "Player")
+            player.transform.position = destination.position;
     }
 }

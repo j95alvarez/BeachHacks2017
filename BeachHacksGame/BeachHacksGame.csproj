@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Prefabs\Temp Prefabs\Shooting\ShootingMechanic.cs" />
+    <Compile Include="Assets\ProjectileScript.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DoorScript.cs" />

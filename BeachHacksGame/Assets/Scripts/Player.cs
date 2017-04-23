@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 	public int speed;
-	// Use this for initialization
-	void Start () {
-		
+
+    //Animator animatorObj;
+
+    [SerializeField]
+    private Transform[] groundPoints;
+
+    [SerializeField]
+    private float groundRadius;
+
+    [SerializeField]
+    private LayerMask whatIsGround;
+    private bool isGrounded, _jump;
+
+    [SerializeField]
+    private float jumpForce;
+
+    public bool hasTurret, hasWire;
+
+    // Use this for initialization
+    void Start () {
+        hasTurret = hasWire = false;
 	}
 	
 	// Update is called once per frame
@@ -36,5 +54,31 @@ public class Player : MonoBehaviour {
 
 		}
 
-	}
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+        }
+
+    }
+
+    private bool IsGrounded()
+    {
+        if (gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        {
+            foreach (Transform point in groundPoints)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
+
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].gameObject != gameObject)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
+    }
 }
