@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour {
-    public GameObject Enemy;
-    public float numEnemy;
-    public float startTime;
-    public float waitTime;
+    public GameObject Enemy;        //The enemy
+    public float numEnemy;          //The number of enemies
+    public float startTime;         //The start time
+    public float waitTime;          //The amount of time that has gone by
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +20,7 @@ public class SpawnerScript : MonoBehaviour {
         {
             for(int i = 0; i < numEnemy; i++)
             {
-                Instantiate(Enemy, transform.position, Quaternion.identity);
+                Instantiate(Enemy, transform.position, Quaternion.identity);        //Creates enemies
                 Debug.Log("Enemy Spawned!");
 
             }
