@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
-	public int speed;
-    public Transform pause;
-    public GameObject[] items; 
+public class Player : MonoBehaviour
+{
+    public int speed;               //Speed of the player
+    public int hp;                  //hp of the player
     //Animator animatorObj;
 
     [SerializeField]
@@ -19,56 +19,51 @@ public class Player : MonoBehaviour {
     private bool isGrounded, _jump;
 
     [SerializeField]
-    private float jumpForce;
+    private float jumpForce;                //The jump force of the player
 
-    public bool hasTurret, hasWire;
+    public bool hasTurret, hasWire;         //Check to see if the player has turrets or wires
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         hasTurret = hasWire = false;
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{ // directional buttons
-        
-		if (Input.GetKey(KeyCode.W)) 
-		{
-			Debug.Log ("up");
+        hp = 5;
+    }
 
-		}
-		if (Input.GetKey(KeyCode.A)) 
-		{
-			Debug.Log ("left");
-			transform.Translate (-speed*Time.deltaTime, 0, 0);
-		
-		}
-		if (Input.GetKey(KeyCode.S)) 
-		{
-			Debug.Log("down");
+    // Update is called once per frame
+    void Update()
+    { // directional buttons
+        if (Input.GetKey(KeyCode.W))
+        {
+            Debug.Log("up");                   //Move up
+
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("left");
+            transform.Translate(-speed * Time.deltaTime, 0, 0);          //Move left
+
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            Debug.Log("down");                  //Move down
 
 
-		}
-		if (Input.GetKey(KeyCode.D)) 
-		{
-			Debug.Log ("right");
-			transform.Translate (speed*Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("right");
+            transform.Translate(speed * Time.deltaTime, 0, 0);           //Move right
 
-		}
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));     //Jump
         }
-
-        if (Input.GetKeyDown(KeyCode.E) && hasTurret)
+        if (hp == 0)
         {
-            Instantiate(items[0], transform.position + (new Vector3(1,0,0)), Quaternion.identity);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q) && hasWire)
-        {
-            Instantiate(items[1], transform.position + (new Vector3(-1,-0.5f,0)), Quaternion.identity);
+            Time.timeScale = 0;         //Stops game when player hp = 0
         }
 
     }
